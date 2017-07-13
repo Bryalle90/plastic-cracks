@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="messagesApp" ng-controller="messagesCtrl">
+  <input type="text" placeholder="user" ng-model="user"><input type="text" placeholder="message" ng-model="message"><button type="button" ng-click="sendMessage()">post</button>
+  
+  <button type="button" ng-click="getMessages()">get messages</button>
+  <br>
+  <input type="text" placeholder="id" ng-model="id"><input type="text" placeholder="message" ng-model="msgReplace"><button type="button" ng-click="modifyMessage()">put</button>
+  <br>
+  <input type="text" placeholder="id" ng-model="delID"><button type="button" ng-click="deleteMessage()">delete</button>
+  <br>
+  <input type="text" placeholder="id" ng-model="getID"><button type="button" ng-click="getMessage()">get</button>
+  <p>{{ response }}</p>
+</div>
+
+<script src="js/messagesApp.js"></script>
+</body>
+</html>
