@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 var rest = require('restler');
 
-var Weather = require('../models/weather');
+var weatherModel = require('../models/weatherModel');
 
 var weather_url = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
 var weather_api_key = '36395be892112f17b47909b165aa532b';

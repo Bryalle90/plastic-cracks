@@ -25,8 +25,8 @@ var port = process.env.PORT || 8080;        // set the port
 // Define a prefix for all routes
 // Can define something unique like MyRestAPI
 // We'll just leave it so all routes are relative to '/'
-app.use('/messages/api/v1', messages);
-app.use('/weather/api/v1', weather);
+app.use('/api/messages/v1', messages);
+app.use('/api/weather/v1', weather);
 
 // make '/app' default route
 app.get('/', function (req, res) {
@@ -37,6 +37,9 @@ app.get('/messages', function (req, res) {
 });
 app.get('/weather', function (req, res) {
     res.sendFile(path.join(__dirname, 'public', 'weather.html'));
+});
+app.get('/hexafy', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'hexafy.html'));
 });
  
 // Start server listening on port 8080
